@@ -1,8 +1,0 @@
-def sum(a,b):
-    result = a + b
-    return result
-
-x = 5
-y = 10 #Ой! Здесь строка, а не число
-total = sum (x, y)
-print ("Сумма:", total)
