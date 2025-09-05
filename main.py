@@ -1,20 +1,17 @@
 import random
 
 def guess_number():
-    print("Добро пожаловать в игру 'Угадай число'!")
-    print("Я загадал число от 1 до 100. Попробуй угадать!")
+    print("Угадай число")
+    print("Я загадал число от 1 до 5.")
     
-    # Компьютер загадывает случайное число
-    secret_number = random.randint(1, 100)
+    secret_number = random.randint(1, 5)
     attempts = 0
     
     while True:
         try:
-            # Пользователь вводит свою догадку
             guess = int(input("\nВведите ваше число: "))
             attempts += 1
             
-            # Проверяем догадку
             if guess < secret_number:
                 print("Слишком маленькое число! Попробуйте еще раз.")
             elif guess > secret_number:
@@ -27,6 +24,5 @@ def guess_number():
         except ValueError:
             print("Пожалуйста, введите целое число!")
 
-# Запускаем игру
 if __name__ == "__main__":
     guess_number()
